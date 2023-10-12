@@ -1,34 +1,34 @@
 <x-layout>
 
 <?php
-    $tickets = [
-        [
-            'title' => 'bruh',
-            'posted_by' => 'joe',
-            'category' => 'wifi',
-            'priority' => 'low',
-            'assigned_to' => 'justin',
-        ],
-        [
-            'title' => 'other bruh',
-            'posted_by' => 'anthony',
-            'category' => 'poster',
-            'priority' => 'medium',
-            'assigned_to' => 'nobody'
-        ],
-        [
-            'title' => 'final bruh',
-            'posted_by' => 'barbs',
-            'category' => 'i dont know',
-            'priority' => 'high',
-            'assigned_to' => 'jarred',
-        ],
+    // $tickets = [
+    //     [
+    //         'title' => 'bruh',
+    //         'posted_by' => 'joe',
+    //         'category' => 'wifi',
+    //         'priority' => 'low',
+    //         'assigned_to' => 'justin',
+    //     ],
+    //     [
+    //         'title' => 'other bruh',
+    //         'posted_by' => 'anthony',
+    //         'category' => 'poster',
+    //         'priority' => 'medium',
+    //         'assigned_to' => 'nobody'
+    //     ],
+    //     [
+    //         'title' => 'final bruh',
+    //         'posted_by' => 'barbs',
+    //         'category' => 'i dont know',
+    //         'priority' => 'high',
+    //         'assigned_to' => 'jarred',
+    //     ],
 
-    ]
+    // ]
 ?>
 
-
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg m-11">
+    <x-search/>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-11 mx-11">
     <table class="w-full text-sm text-left text-gray-500 ">
         <thead class="text-xs text-gray-700 uppercase bg-theme3 ">
             <tr>
@@ -60,15 +60,20 @@
 
             @foreach ($tickets as $ticket)
                 <x-ticket-card :ticket="$ticket" class="{{ $toggle ? 'bg-white' : 'bg-gray-200' }}" />
-
             @php
                 $toggle = !$toggle
             @endphp
             @endforeach
 
-
         </tbody>
+
     </table>
+
+
 </div>
+
+
+{{ $tickets->links() }}
+
 
 </x-layout>

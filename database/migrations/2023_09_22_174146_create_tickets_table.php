@@ -15,8 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->enum('priority', ['low', 'medium', 'hard']);
-            $table->foreignId('category_id')->constrained();
+            $table->string('priority');
+            $table->foreignId('assigned_to')->nullable()->constrained(
+                table: 'users', indexName: 'tickets_assigned_to'
+            );
+            // $table->foreignId('assigned_to')->nullable()->constrained('users', 'tickets_assigned_to');
+            $table->string('category');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
