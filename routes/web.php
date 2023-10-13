@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -54,3 +55,7 @@ Route::get('/users/register', [UserController::class, 'create']);
 // Store new user
 Route::post('/users/register', [UserController::class, 'store']);
 
+
+// COMMENT ROUTES
+
+Route::post('/comments/{ticket}', [CommentController::class, 'store']);
