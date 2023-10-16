@@ -2,7 +2,7 @@
 <form action="/" class=" mt-6 mr-auto ml-auto flex justify-center items-center">
     <div class="mr-3">
         <select name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option value="" selected>Choose a Category</option>
+            <option value="" selected>All Categories</option>
             <option value="Account Management">Account Management</option>
             <option value="Hardware" >Hardware</option>
             <option value="Photo/Video">Photo/Video</option>

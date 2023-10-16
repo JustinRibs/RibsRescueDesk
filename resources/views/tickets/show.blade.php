@@ -2,7 +2,7 @@
 {{-- Title / Posted By / Category / Assigned / priority --}}
 <x-layout>
 
-        @if (auth()->user()->isAdmin && $ticket->assignedTo == null)
+        @if (auth()->user()?->isAdmin && $ticket->assignedTo == null)
             <x-unassigned-alert :ticket='$ticket' />
         @endif
         <x-card class=" p-6 max-w-3xl mx-auto mt-24 grid grid-cols-8 grid-rows-1 bg-theme4">
