@@ -35,6 +35,7 @@
             <option value="Website">Website</option>
             <option value="WiFi">WiFi</option>
             <option value="Printing">Printing</option>
+            <option value="Discrimination">Discrimination</option>
             </select>
             <div class="mb-6">
                 <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ticket Title</label>

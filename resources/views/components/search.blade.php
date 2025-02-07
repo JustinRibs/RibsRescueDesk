@@ -12,7 +12,8 @@
             <option value="Voicemail">Voicemail</option>
             <option value="Website">Website</option>
             <option value="WiFi">WiFi</option>
-            <option value="Printing">Printing</option>
+            <option value="Printing">Printing</option>\
+            <option value="Discrimination">Discrimination</option>
           </select>
     </div>
         <button type="submit" class="text-white bg-theme3 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-theme3 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2">
