@@ -3,6 +3,8 @@
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\UserController;
+use App\Mail\Welcome;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,3 +61,9 @@ Route::post('/users/register', [UserController::class, 'store']);
 // COMMENT ROUTES
 
 Route::post('/comments/{ticket}', [CommentController::class, 'store']);
+
+
+Route::get('/sendmail', function () {
+    Mail::to('jribarich98@gmail.com')->send( new Welcome('justin'));
+    return true;
+});
