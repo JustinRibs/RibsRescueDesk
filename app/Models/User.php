@@ -42,7 +42,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function tickets(){
+    public function ticket(){
         return $this->hasMany(Ticket::class);
     }
     public function comment() {

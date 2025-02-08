@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [TicketController::class, 'index']);
 
 // Get Users tickets
-Route::get('/user/tickets', [TicketController::class, 'list']);
+Route::get('/user/tickets/{id}', [TicketController::class, 'index']);
 
 // Show Create Form
 Route::get('/ticket/create', [TicketController::class, 'create'])->middleware('auth');
