@@ -18,10 +18,21 @@ class TicketController extends Controller
     {
 
         $tickets = Ticket::with(['user', 'assignedTo'])->latest()->filter(request(['category', 'id']))->simplePaginate(8);
-
         return view('tickets.index', [
             'tickets' => $tickets,
         ]);
+    }
+
+    // show only the current users tickets
+    public function list()
+    {
+       $user = auth()->user()->id;
+       $tickets = Ticket::where('user_id', '=', $user)->with(['user', 'assignedTo'])->latest()->filter(request(['category', 'id']))->simplePaginate(8);
+
+       return view('tickets.index', [
+        'tickets' => $tickets,
+       ]);
+
     }
 
     /**
@@ -84,17 +95,19 @@ class TicketController extends Controller
     {
         $valid = $request->validate([
             'assigned_to' => Rule::requiredIf($request->user()->isAdmin),
-            'priority' => 'required',
-            'category' => 'required',
-            'title' => 'required|max:60',
-            'description' => 'required|max:250',
+            'priority' => 'string',
+            'category' => 'string',
+            'title' => 'string|max:80',
+            'description' => 'string|max:250',
         ]);
+    
         $ticket->assigned_to = $valid['assigned_to'];
         $ticket->priority = $valid['priority'];
         $ticket->category = $valid['category'];
         $ticket->title = $valid['title'];
         $ticket->description = $valid['description'];
         $ticket->save();
+
         return redirect('/ticket/' . $ticket->id);
     }
 

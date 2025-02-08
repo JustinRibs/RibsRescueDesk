@@ -31,7 +31,7 @@
                       </li>
 
                     <li>
-                        <a href="/user/tickets/{{ auth()->user()->id }}" name="id" class="block px-4 py-2 hover:bg-gray-100 ">My Tickets</a>
+                        <a href="/user/tickets" name="id" class="block px-4 py-2 hover:bg-gray-100 ">My Tickets</a>
                     </li>
                     @else
                     <li>
