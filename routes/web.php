@@ -59,3 +59,7 @@ Route::post('/users/register', [UserController::class, 'store']);
 // COMMENT ROUTES
 
 Route::post('/comments/{ticket}', [CommentController::class, 'store']);
+
+Route::get('/tomrod', function () {
+    return view('tomrod');
+});
