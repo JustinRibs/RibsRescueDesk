@@ -18,8 +18,8 @@
         <img class="w-7 ml-4" src="/images/{{ $image = ($ticket->priority == 'low') ? 'mild.png' : (($ticket->priority == 'medium') ? 'medium.png' : 'Hot.png')
     }}" alt="">
     </td>
-    <td class="px-6 py-4">
+    {{-- <td class="px-6 py-4"> --}}
         {{-- this will take you to show the ticket --}}
-        <a href="/ticket/{{ $ticket->id }}" class="font-medium text-blue-600  hover:underline">Interact</a>
-    </td>
+        {{-- <a href="/ticket/{{ $ticket->id }}" class="font-medium text-blue-600  hover:underline">Interact</a> --}}
+    {{-- </td> --}}
 </tr>
