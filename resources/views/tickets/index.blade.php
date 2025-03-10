@@ -28,7 +28,7 @@
 ?>
 
     <x-search/>
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-11 mx-11">
+<div class="relative overflow-x-auto shadow-md rounded-lg mt-11 mx-11">
     @if (!auth()->check())
             <x-login-alert />
         @endif

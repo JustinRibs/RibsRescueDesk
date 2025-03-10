@@ -2,7 +2,7 @@
 <nav class=" border-gray-200 bg-theme1 dark:border-gray-700">
     <div class="dark max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="/" class="flex items-center">
-          <img src="{{ asset('images/technical-support.png') }}" class="h-10 mr-2" alt="" />
+          <img src="{{ asset('images/tech-support-irish.png') }}" class="h-10 mr-2" alt="" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ribs Rescue Desk</span>
       </a>
       <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
