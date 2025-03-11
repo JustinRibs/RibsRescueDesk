@@ -1,7 +1,7 @@
 {{-- alternate = bg-gray200 | bg-white --}}
 @props(['ticket'])
 <tr {{ $attributes->merge(['class' => 'border-b']) }} class="border-b ">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+    <th scope="row" class="px-6 py-4 font-medium text-gray-900">
         <a href="/ticket/{{ $ticket->id }}">{{  $ticket->title  }}</a>
     </th>
     <td class="px-6 py-4">
