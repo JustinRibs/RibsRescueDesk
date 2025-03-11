@@ -15,7 +15,7 @@
         {{ $ticket->assignedTo ? $ticket->assignedTo->name : '-' }}
     </td>
     <td class="px-6 py-4">
-        <img class="w-7 ml-4" src="/images/{{ $image = ($ticket->priority == 'Low') ? 'mild.png' : (($ticket->priority == 'Medium') ? 'medium.png' : 'Hot.png')
+        <img class="w-7 ml-4" src="/images/{{ $image = ($ticket->priority == 'Low') ? 'low.png' : (($ticket->priority == 'Medium') ? 'med.png' : 'high.png')
     }}" alt="">
     </td>
     {{-- <td class="px-6 py-4"> --}}
