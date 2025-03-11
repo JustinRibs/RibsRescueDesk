@@ -13,7 +13,7 @@
                 <p class=" text-sm">{{ $ticket->description }}</p>
             </div>
             <div class="ml-auto">
-                <img class="w-6" src="/images/{{ $image = ($ticket->priority == 'low') ? 'low.png' : (($ticket->priority == 'medium') ? 'med.png' : 'high.png') }}" alt="">
+                <img class="w-6" src="/images/{{ $image = ($ticket->priority == 'Low') ? 'low.png' : (($ticket->priority == 'Medium') ? 'med.png' : 'High.png') }}" alt="">
             </div>
             <div class=" col-span-7">
                 @foreach ($comments as $comment)
